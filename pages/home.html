@@ -764,7 +764,7 @@
         updateText('calcHashAmount2', getCurrencyPriceText(profit));
         return;
       }
-    } catch (e) { console.log(e)}
+    } catch (e) { console.log(e) }
     updateText('calcHashAmount1', '');
     updateText('calcHashAmount2', '');
   }
@@ -786,37 +786,67 @@
 
 
   async function getXUNIdata() {
-    //var currencies = ["USD", "EUR", "BTC", "LTC", "ETH"]
     var targetVolume = 0;
-    $.get("https://api.xeggex.com/api/v2/ticker/XUNI_USDT", function (data, status) {
-      if (status == "success") {
-        $(`#XUNIToUSD`).text(parseFloat(data.last_price).toFixed(8));
-        targetVolume = data.target_volume
-        USDperXUNI = data.last_price;
-        $(`#dailyVolume`).text(formatUsd(parseFloat(targetVolume).toFixed(2)));
+    var xuni_ticker = null;
+    var btc_ticker = null;
+    var USDperXUNI = null;
 
+    $.get("https://api.exbitron.com/api/v1/cg/tickers", function (data, status) {
+      if (status == "success") {
+        data.forEach(function (ticker) {
+          if (ticker.ticker_id === 'XUNI-USDT') {
+            xuni_ticker = ticker;
+          }
+          if (ticker.ticker_id === 'BTC-USDT') {
+            btc_ticker = ticker;
+          }
+        });
+
+        if (xuni_ticker) {
+          USDperXUNI = parseFloat(xuni_ticker.last_price);
+          $(`#XUNIToUSD`).text(USDperXUNI.toFixed(8));
+
+          targetVolume = parseFloat(xuni_ticker.target_volume);
+          $(`#dailyVolume`).text(formatUsd(targetVolume.toFixed(2)));
+
+          // Update global variable for calculator if needed
+          window.USDperXUNI = USDperXUNI;
+        }
+
+        if (xuni_ticker && btc_ticker) {
+          var btcPrice = parseFloat(btc_ticker.last_price);
+          if (btcPrice > 0) {
+            var xuniInBtc = USDperXUNI / btcPrice;
+            $(`#XUNIToBTC`).text(xuniInBtc.toFixed(10));
+          }
+        }
+
+        // Fetch Supply
+        $.get("https://explorer.ultranote.org/q/supply/", function (supplyData, status) {
+          if (status == "success") {
+            $(`#marketCap`).text(formatUsd(parseFloat(supplyData * USDperXUNI).toFixed(2)));
+          }
+        });
       }
-      $.get("https://api.xeggex.com/api/v2/ticker/BTC_USDT", function (data, status) {
-        if (status == "success") {
-          $(`#XUNIToBTC`).text(parseFloat(USDperXUNI/data.last_price).toFixed(8));
-        }
-      });
-      $.get("https://explorer.ultranote.org/q/supply/", function (data, status) {
-        if (status == "success") {
-          $(`#marketCap`).text(formatUsd(parseFloat(data * USDperXUNI).toFixed(2)));
-        }
-      });
     });
+
+    // Keep the mock/external supply call if it exists or use default
+    // The original code didn't seem to have the supply call in the snippet I saw, 
+    // but market.html had it. home.html logic was incomplete in the previous view.
+    // I will add the supply fetching logic similar to the other project to be safe,
+    // or checks common API. 
+    // Actually, let's check if home.html has formatUsd defined.
   }
 
   function formatUsd(price) {
-    if (price >= 1000) {
-      price = price / 1000;
-      return price.toFixed(2) + "K $";
+    var num = parseFloat(price);
+    if (num >= 1000) {
+      return (num / 1000).toFixed(2) + "K $";
     } else {
-      return price + " $";
+      return num.toFixed(2) + " $";
     }
   }
+
 
 
 

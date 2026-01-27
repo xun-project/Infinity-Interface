@@ -2,8 +2,8 @@
     <!-- Market -->
     <div class="slim-pageheader">
         <ol class="breadcrumb slim-breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page"><span tkey="market">Market / Calculator</span></li>
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><span tkey="market">Market / Calculator</span></li>
         </ol>
         <h6 class="slim-pagetitle"><span tkey="market">Market / Calculator</span></h6>
     </div><!-- slim-pageheader -->
@@ -11,67 +11,71 @@
     <!-- Statistics -->
     <div class="row justify-content-center pt-5 mb-5">
         <div class="col-xl-3 col-sm-6 m-t35 margin-top4em margin-bottom3rem">
-          <div class="card height-10em border-radius20px">
-            <div class="card-body text-center">
-              <img src="../img/dollars.png" class="margin-top-65px height-icon-width" alt="not found"/>
-              <h2 id="XUNIToUSD" class="text-white font-weight-600">N/A</h2>
-              <br/>
-              <h6 class="text-white">XUNI TO USD</h6>
+            <div class="card height-10em border-radius20px">
+                <div class="card-body text-center">
+                    <img src="../img/dollars.png" class="margin-top-65px height-icon-width" alt="not found" />
+                    <h2 id="XUNIToUSD" class="text-white font-weight-600">N/A</h2>
+                    <br />
+                    <h6 class="text-white">XUNI TO USD</h6>
+                </div>
+
             </div>
-    
-          </div>
-    
+
         </div>
         <div class="col-xl-3 col-sm-6 m-t35 margin-top4em margin-bottom3rem">
-          <div class="card height-10em border-radius20px">
-            <div class="card-body text-center">
-              <img src="../img/xuni.png" class="margin-top-65px height-icon-width" alt="not found"/>
-              <h2 id="XUNIToBTC" class="text-white font-weight-600">N/A</h2>
-              <br/>
-              <h6 class="text-white">XUNI TO BTC</h6>
+            <div class="card height-10em border-radius20px">
+                <div class="card-body text-center">
+                    <img src="../img/xuni.png" class="margin-top-65px height-icon-width" alt="not found" />
+                    <h2 id="XUNIToBTC" class="text-white font-weight-600">N/A</h2>
+                    <br />
+                    <h6 class="text-white">XUNI TO BTC</h6>
+                </div>
+
             </div>
-    
-          </div>
-    
+
         </div>
         <div class="col-xl-3 col-sm-6 m-t35 margin-top4em margin-bottom3rem">
-          <div class="card height-10em border-radius20px">
-            <div class="card-body text-center">
-              <img src="../img/market-cap.png" class="margin-top-65px height-icon-width" alt="not found"/>
-              <h2 class="text-white font-weight-600">N/A</h2>
-              <br/>
-              <h6 class="text-white">Market Cap</h6>
+            <div class="card height-10em border-radius20px">
+                <div class="card-body text-center">
+                    <img src="../img/market-cap.png" class="margin-top-65px height-icon-width" alt="not found" />
+                    <h2 class="text-white font-weight-600">N/A</h2>
+                    <br />
+                    <h6 class="text-white">Market Cap</h6>
+                </div>
+
             </div>
-    
-          </div>
-    
+
         </div>
         <div class="col-xl-3 col-sm-6 m-t35 margin-top4em margin-bottom3rem">
-          <div class="card height-10em border-radius20px">
-            <div class="card-body text-center">
-              <img src="../img/volume.png" class="margin-top-65px height-icon-width" alt="not found"/>
-              <h2 class="text-white font-weight-600">N/A</h2>
-              <br/>
-              <h6 class="text-white">Daily Volume</h6>
+            <div class="card height-10em border-radius20px">
+                <div class="card-body text-center">
+                    <img src="../img/volume.png" class="margin-top-65px height-icon-width" alt="not found" />
+                    <h2 class="text-white font-weight-600">N/A</h2>
+                    <br />
+                    <h6 class="text-white">Daily Volume</h6>
+                </div>
+
             </div>
-    
-          </div>
-    
+
         </div>
-      </div> 
+    </div>
     <div id="chartMarketPrice">
         <canvas id="chartMarketPriceCanvas"></canvas>
         <a class="chart-style"></a>
-    </div>    
+    </div>
 
     <!-- Mining Profit Calculator -->
     <div class="card mg-t-20" id="miningProfitCalc">
-        <div class="card-header tx-medium bd-0 tx-white input-bg-purple-dark"><span tkey="estimateProfit">Estimate Mining Profits</span></div>
+        <div class="card-header tx-medium bd-0 tx-white input-bg-purple-dark"><span tkey="estimateProfit">Estimate
+                Mining Profits</span></div>
         <div class="card-body" id="calcHashHolder">
             <div class="input-group">
-                <input class="form-control" id="calcHashRate" tplaceholder="enterYourHashrate" placeholder="Enter Your Hash Rate" type="number">
+                <input class="form-control" id="calcHashRate" tplaceholder="enterYourHashrate"
+                    placeholder="Enter Your Hash Rate" type="number">
                 <div class="input-group-btn">
-                    <button type="button" class="btn dropdown-toggle" style="background:transparent; border:none; color:white" data-toggle="dropdown" id="calcHashDropdown">
+                    <button type="button" class="btn dropdown-toggle"
+                        style="background:transparent; border:none; color:white" data-toggle="dropdown"
+                        id="calcHashDropdown">
                         <span id="calcHashUnit" data-mul="1">KH/s</span> <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-right" role="menu" id="calcHashUnits">
@@ -85,8 +89,8 @@
                     <div id="calcHashAmount">
                         <span id="calcHashAmount1"></span>
                         <span id="calcHashAmount2"></span>
-                    </div> 
-                    <div id="calcHashPeriod"> 
+                    </div>
+                    <div id="calcHashPeriod">
                         <span tkey="perDay">per day</span>
                     </div>
                 </span>
@@ -96,13 +100,18 @@
                         <div class="toggle toggle-modern" id="hashrateToggle" style="height: 26px; width: 60px;">
                             <div class="toggle-slide">
                                 <div class="toggle-inner" style="width: 94px; margin-left: 0px;">
-                                    <div class="toggle-on active" style="height: 26px; width: 47px; text-indent: -8.66667px; line-height: 26px;">ON</div>
-                                    <div class="toggle-blob" style="height: 26px; width: 26px; margin-left: -13px;"></div>
-                                    <div class="toggle-off" style="height: 26px; width: 47px; margin-left: -13px; text-indent: 8.66667px; line-height: 26px;">OFF</div>
+                                    <div class="toggle-on active"
+                                        style="height: 26px; width: 47px; text-indent: -8.66667px; line-height: 26px;">
+                                        ON</div>
+                                    <div class="toggle-blob" style="height: 26px; width: 26px; margin-left: -13px;">
+                                    </div>
+                                    <div class="toggle-off"
+                                        style="height: 26px; width: 47px; margin-left: -13px; text-indent: 8.66667px; line-height: 26px;">
+                                        OFF</div>
                                 </div>
                             </div>
                         </div>
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,200 +122,169 @@
 
 <!-- Javascript -->
 <script>
-// Market settings
-var priceSource = 'cryptonator';
-var priceCurrency = 'USD';
+    // Market settings
+    var priceSource = 'cryptonator';
+    var priceCurrency = 'USD';
 
-$('.toggle').toggles({
-    on: true,
-    width: 65,
-    height: 30
-});
-
-if (typeof cryptonatorWidget !== 'undefined' && typeof marketCurrencies === 'undefined') {
-    var marketCurrencies = cryptonatorWidget;
-}
-
-// Charts initialized
-var chartsInitialized = false;
-var intervalChartsUpdate;
-
-// Update current page
-currentPage = {
-    destroy: function(){
-    },
-    update: function(){
-        priceSource = lastStats.config.priceSource || 'cryptonator';
-        priceCurrency = lastStats.config.priceCurrency || 'USD';
-	
-        updateText('priceChartCurrency', priceCurrency);
-        updateText('profitChartCurrency', priceCurrency);
-	
-        calcEstimateProfit();	
-    }
-};
-
-// Handle tooltip
-$(function() {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-
-/**
- * Market prices
- **/
- 
- var marketPriceChart = null;
- var USDperXUNI = null;
-
-// Returns an array of dates between the two dates
-var getDates = function(startDate, endDate) {
-  var dates = [],
-      currentDate = startDate,
-      addDays = function(days) {
-        var date = new Date(this.valueOf());
-        date.setDate(date.getDate() + days);
-        return date;
-      };
-  while (currentDate <= endDate) {
-    dates.push(moment(currentDate).format("MMM Do YYYY"));
-    currentDate = addDays.call(currentDate, 1);
-  }
-  return dates;
-};
-
-// get UltraNoteI market data
-$.getJSON( "https://api.coingecko.com/api/v3/coins/ultranote?sparkline=true", function( data ) {
-    USDperXUNI = data.market_data.current_price.usd;
-    $("#XUNTIoUSD").html("$ " + data.market_data.current_price.usd.toFixed(2));
-    $("#XUNIToBTC").html(data.market_data.current_price.btc.toFixed(8));
-    $("#marketcap").html("$ " + data.market_data.market_cap.usd.toFixed(0));
-    $("#marketcapRank").html("(RANK " + data.market_cap_rank + ")");
-    $("#dailyVolume").html("$ " + data.market_data.total_volume.usd.toFixed(0));
-
-    if (marketPriceChart) {
-        marketPriceChart.destroy(); 
-    }
-    
-    var timeLabels = [];
-	var dataLength = data.market_data.sparkline_7d.price.length;
-	var durationAsMS = moment.duration(7 / dataLength, 'd').asMilliseconds();
-
-	for (i = dataLength - 1; i >= 0; i--) {
-		timeLabels.push(moment().subtract(durationAsMS * (i + 1), 'ms').format('YYYY-MM-DD'));
-	}
-
-    marketPriceChart = new Chart(document.getElementById('chartMarketPriceCanvas'), {
-        type: 'line',
-        data: {
-            labels: timeLabels,
-            datasets: [{
-                data: data.market_data.sparkline_7d.price,
-                backgroundColor: 'rgba(255,165,0,0.2)', 
-                fill: true,
-                borderWidth: 0,
-                pointRadius: 1,
-                borderColor: '#FFA500'
-            }]
-        },
-        options: {
-            animation: false,
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                display: false,
-                labels: {
-                    display: false
-                }
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        maxTicksLimit: 5,
-                        fontSize: 10,
-                        callback: function(value, index, values) {
-                            return value.toFixed(2) + '$';
-                        }                    
-                    },
-                    gridLines: {
-                        color: 'rgba(255,255,255,.08)'
-                    }
-                }],
-                xAxes: [{
-					ticks: {
-         				autoSkip: true,
-          				maxTicksLimit: 7,
-          				maxRotation: 0,
-          				minRotation: 0
-        			},
-        			gridLines: {
-              			color: 'rgba(255, 255, 255, .08)'
-					},							
-				}]
-            },
-            hover: {
-     			mode: 'nearest',
-     			intersect: true
-   			},
-   			tooltips: {
-     			mode: 'index',
-     			intersect: false,
-				callbacks: {
-       		        label: function(tooltipItem) {
-             	        return "$ " + Number(tooltipItem.yLabel).toFixed(4);
-           		    }			
-       			}						
-			}
-        }
+    $('.toggle').toggles({
+        on: true,
+        width: 65,
+        height: 30
     });
-});
-    
-/**
- * Hash Profitability Calculator
- **/
- 
-// Automatically update profit calculation on key press
-$('#calcHashRate').keyup(calcEstimateProfit).change(calcEstimateProfit);
 
-// Click on button
-$('#calcHashUnits > li > a').click(function(e){
-    e.preventDefault();
-    $('#calcHashUnit').text($(this).text()).data('mul', $(this).data('mul'));
-    calcEstimateProfit();
-});
+    if (typeof cryptonatorWidget !== 'undefined' && typeof marketCurrencies === 'undefined') {
+        var marketCurrencies = cryptonatorWidget;
+    }
 
-$('#hashrateToggle').on('toggle', function(e, active) {
-    calcEstimateProfit();
-});
+    // Charts initialized
+    var chartsInitialized = false;
+    var intervalChartsUpdate;
 
-// Calculate current estimation
-function calcEstimateProfit(){
-    try 
-    {
-        var addHashrateToNetwork = $('#hashrateToggle').data('toggles').active;
-        var rateUnit = Math.pow(1000,parseInt($('#calcHashUnit').data('mul')));
-        var hashRate = parseFloat($('#calcHashRate').val()) * rateUnit;
-        var networkHash = lastStats.network.difficulty / lastStats.config.coinDifficultyTarget;
-        if (addHashrateToNetwork) {
-            networkHash = networkHash + hashRate;   
+    // Update current page
+    currentPage = {
+        destroy: function () {
+        },
+        update: function () {
+            priceSource = lastStats.config.priceSource || 'cryptonator';
+            priceCurrency = lastStats.config.priceCurrency || 'USD';
+
+            updateText('priceChartCurrency', priceCurrency);
+            updateText('profitChartCurrency', priceCurrency);
+
+            calcEstimateProfit();
         }
-        var profit = lastStats.lastblock.reward * (1440 / 2) * (hashRate / networkHash);
-        if (profit) {
-            updateText('calcHashAmount1', getReadableCoins(profit, 2));
-            updateText('calcHashAmount2', getCurrencyPriceText(profit));
-            return;
+    };
+
+    // Handle tooltip
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    /**
+     * Market prices
+     **/
+
+    var marketPriceChart = null;
+    var USDperXUNI = null;
+
+    // Returns an array of dates between the two dates
+    var getDates = function (startDate, endDate) {
+        var dates = [],
+            currentDate = startDate,
+            addDays = function (days) {
+                var date = new Date(this.valueOf());
+                date.setDate(date.getDate() + days);
+                return date;
+            };
+        while (currentDate <= endDate) {
+            dates.push(moment(currentDate).format("MMM Do YYYY"));
+            currentDate = addDays.call(currentDate, 1);
+        }
+        return dates;
+    };
+
+    // get UltraNoteI market data
+    // get UltraNoteI market data from Exbitron
+    $.get("https://api.exbitron.com/api/v1/cg/tickers", function (data, status) {
+        if (status == "success") {
+            var xuni_ticker = null;
+            var btc_ticker = null;
+
+            data.forEach(function (ticker) {
+                if (ticker.ticker_id === 'XUNI-USDT') {
+                    xuni_ticker = ticker;
+                }
+                if (ticker.ticker_id === 'BTC-USDT') {
+                    btc_ticker = ticker;
+                }
+            });
+
+            if (xuni_ticker) {
+                USDperXUNI = parseFloat(xuni_ticker.last_price);
+                $("#XUNIToUSD").html("$ " + USDperXUNI.toFixed(2)); // Fixed typo ID if it was XUNTIoUSD
+
+                // Note: Exbitron cg/tickers response structure:
+                // last_price, target_volume, etc.
+                // market_cap is not directly in the ticker usually, we calculate it 
+                // or Exbitron might not send it.
+                // Coingecko sent 'market_data.market_cap.usd'. 
+                // We will fetch supply and calculate it ourselves like in home.html.
+
+                $("#dailyVolume").html("$ " + parseFloat(xuni_ticker.target_volume).toFixed(0));
+
+                // Fetch Supply for Market Cap
+                $.get("https://explorer.ultranote.org/q/supply/", function (supplyData, status) {
+                    if (status == "success") {
+                        $("#marketCap").html("$ " + (parseFloat(supplyData) * USDperXUNI).toFixed(0));
+                    }
+                });
+            }
+
+            if (xuni_ticker && btc_ticker) {
+                var btcPrice = parseFloat(btc_ticker.last_price);
+                if (btcPrice > 0) {
+                    var xuniInBtc = USDperXUNI / btcPrice;
+                    $("#XUNIToBTC").html(xuniInBtc.toFixed(10));
+                }
+            }
+
+            // marketcapRank is not available in Exbitron ticker data
+            $("#marketcapRank").html("");
+        }
+
+        // Disable Chart since we don't have sparkline data
+        if (marketPriceChart) {
+            marketPriceChart.destroy();
+        }
+        document.getElementById('chartMarketPriceCanvas').style.display = 'none';
+    });
+
+    /**
+     * Hash Profitability Calculator
+     **/
+
+    // Automatically update profit calculation on key press
+    $('#calcHashRate').keyup(calcEstimateProfit).change(calcEstimateProfit);
+
+    // Click on button
+    $('#calcHashUnits > li > a').click(function (e) {
+        e.preventDefault();
+        $('#calcHashUnit').text($(this).text()).data('mul', $(this).data('mul'));
+        calcEstimateProfit();
+    });
+
+    $('#hashrateToggle').on('toggle', function (e, active) {
+        calcEstimateProfit();
+    });
+
+    // Calculate current estimation
+    function calcEstimateProfit() {
+        try {
+            var addHashrateToNetwork = $('#hashrateToggle').data('toggles').active;
+            var rateUnit = Math.pow(1000, parseInt($('#calcHashUnit').data('mul')));
+            var hashRate = parseFloat($('#calcHashRate').val()) * rateUnit;
+            var networkHash = lastStats.network.difficulty / lastStats.config.coinDifficultyTarget;
+            if (addHashrateToNetwork) {
+                networkHash = networkHash + hashRate;
+            }
+            var profit = lastStats.lastblock.reward * (1440 / 2) * (hashRate / networkHash);
+            if (profit) {
+                updateText('calcHashAmount1', getReadableCoins(profit, 2));
+                updateText('calcHashAmount2', getCurrencyPriceText(profit));
+                return;
+            }
+        }
+        catch (e) { }
+        updateText('calcHashAmount1', '');
+        updateText('calcHashAmount2', '');
+    }
+
+    // Get price in specified currency
+    function getCurrencyPriceText(coinsRaw) {
+        if (USDperXUNI) {
+            var amount = parseFloat((parseInt(coinsRaw || 0) / lastStats.config.coinUnits).toFixed(2));
+            var price = USDperXUNI * amount;
+            return ("($ " + price.toFixed(2) + ")");
         }
     }
-    catch(e){ }
-    updateText('calcHashAmount1', '');
-    updateText('calcHashAmount2', '');
-}
-
-// Get price in specified currency
-function getCurrencyPriceText(coinsRaw) {    
-    if (USDperXUNI) {
-        var amount = parseFloat((parseInt(coinsRaw || 0) / lastStats.config.coinUnits).toFixed(2));
-        var price = USDperXUNI * amount; 
-        return ("($ " + price.toFixed(2) + ")");
-    }
-}
 </script>
