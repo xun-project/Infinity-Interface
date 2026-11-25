@@ -1,0 +1,12 @@
+/* UltraNote admin visual layer. Functionality and admin routes unchanged. */
+body{background:#08152e!important;color:#eaf8ff!important;font-family:system-ui,-apple-system,"Segoe UI",sans-serif!important}
+.nav-side-menu{background:linear-gradient(180deg,#08152f,#0b1d3e)!important;border-right:1px solid #21608b!important}
+.nav-side-menu .brand{background:#0b2448!important;font-weight:700!important}
+.nav-side-menu li.active,.nav-side-menu li:hover{background:rgba(29,166,210,.17)!important;border-left-color:#47e8f0!important}
+.nav-side-menu a{color:#cde7fa!important}
+#page-wrapper{background:radial-gradient(ellipse at top right,rgba(53,84,182,.22),transparent 48%),#08152e!important;color:#eaf8ff!important}
+.panel,.card,.well,.table-responsive{background:#102341!important;border:1px solid rgba(77,187,231,.3)!important;border-radius:12px!important;color:#eaf8ff}
+.table{color:#eaf8ff!important}.table th,.table td{border-color:#264a71!important}
+input,select,.form-control{background:#112646!important;color:white!important;border:1px solid #2b618c!important}
+a{color:#67e5f4}a:hover{color:#bbf6ff}
+footer{background:#07132c!important;color:#bcd6e7!important;border-top:1px solid #23507b!important}
